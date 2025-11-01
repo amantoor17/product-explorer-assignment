@@ -1,16 +1,83 @@
-# React + Vite
+# Product Explorer Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite application built as part of the Product Explorer Assignment, which displays products from a public API (https://dummyjson.com).
+The app allows users to browse, sort, filter, and view product details in an interactive, responsive interface using Tailwind CSS and Framer Motion.
 
-Currently, two official plugins are available:
+# Features
+# Core Functionality
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Fetch products from DummyJSON API (https://dummyjson.com/products)
 
-## React Compiler
+Pagination using limit and skip query parameters
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Filter products by category
 
-## Expanding the ESLint configuration
+Sort products by:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Price: Low → High / High → Low
+
+Title: A → Z / Z → A
+
+Product detail modal showing product information (image, price, rating, etc.)
+
+Loading skeleton and error message handling
+
+# UI & Styling
+
+Built with Tailwind CSS
+
+Fully responsive design (mobile, tablet, desktop)
+
+Smooth animations using Framer Motion
+
+Modern layout with a sticky header and clean product grid
+
+# Tech Stack
+Layer	Technology
+Frontend Framework	React (with Vite)
+Styling	Tailwind CSS
+Animations	Framer Motion
+API	DummyJSON (https://dummyjson.com)
+
+# Concepts Implemented
+
+React hooks: useState, useEffect, useMemo
+
+Reusable components (Filters, Sorter, Pagination, ProductCard)
+
+Dynamic API queries with limit, skip, and category parameters
+
+Conditional rendering for loading/error states
+
+Animated modal transitions (AnimatePresence + motion.div)
+
+Client-side sorting and filtering logic
+
+
+# Installation & Setup
+
+- Clone the Repository
+git clone https://github.com/amantoor17/product-explorer-assignment
+cd product-explorer-assignment
+
+- Install Dependencies
+npm install
+
+- Run Development Server
+npm run dev
+
+# API Reference
+
+Base URL → https://dummyjson.com
+
+Fetch Products
+GET /products?limit=12&skip=0
+
+Fetch Categories
+GET /products/categories
+
+Fetch Products by Category
+GET /products/category/{category}?limit=12&skip=0
+
+Fetch Single Product
+GET /products/{id}
