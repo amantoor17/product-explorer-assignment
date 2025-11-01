@@ -18,7 +18,7 @@ const Sorter = ({value, onChange}) => {
             <option value="price_asc">Price: Low → High</option>
             <option value="price_desc">Price: High → Low</option>
             <option value="title_asc">Title: A → Z</option>
-            <option value="title_asc">Title: Z → A</option>
+            <option value="title_desc">Title: Z → A</option>
         </select>
     </div>
   );

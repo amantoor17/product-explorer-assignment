@@ -1,10 +1,23 @@
-import { AnimatePresence } from 'framer-motion';
-import React, { useState } from 'react'
+import { AnimatePresence, motion} from 'framer-motion';
+import React, { useEffect, useState } from 'react'
+import { fetchProductById } from '../api/products';
 
 const ProductDetailModal = ({id, onClose}) => {
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+
+    useEffect(() => {
+        
+        if(!id) return;
+        setLoading(true);
+        setError(null);
+        
+        fetchProductById(id)
+            .then(data => setProduct(data))
+            .catch(err => setError(err.message))
+            .finally(() => setLoading(false));
+    }, [id]);
 
   return (
     <AnimatePresence>
@@ -19,7 +32,7 @@ const ProductDetailModal = ({id, onClose}) => {
             >
                 <motion.div
                     className="bg-white rounded-lg max-w-4xl w-full mx-4 p-6 relative"
-                    opacity={{y:30, opacity:0}}
+                    initial={{y:30, opacity:0}}
                     animate={{y:0, opacity:1}}
                     exit={{y:30, opacity:0}}
                     onClick={(e) => e.stopPropagation()}
