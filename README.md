@@ -1,4 +1,4 @@
-#### **LIVE DEMO :** https://amantoor17.github.io/product-explorer-assignment/
+## **LIVE DEMO :** https://amantoor17.github.io/product-explorer-assignment/
 
 # Product Explorer Assignment
 
