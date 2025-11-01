@@ -17,7 +17,7 @@ const ProductCard = ({product, onOpen}) => {
     <div className='mt-3 flex-1'>
         <h3 className='text-sm font-medium line-clamp-2'>{product.title}</h3>
         <div className='mt-2 flex items-center justify-between'>
-            <span className='font-semibold'>{product.price}</span>
+            <span className='font-semibold'>₹{product.price}</span>
             <span className='text-sm text-gray-500'>{product.rating} ★</span>
         </div>
     </div>

@@ -14,7 +14,7 @@ const Pagination = ({page, totalPages, onChange}) => {
 
       <div className='text-gray-700 font-semibold text-center'>
         Page {page + 1}
-        {totalPages ? `of ${totalPages}` : ""}
+        {totalPages ? ` of ${totalPages}` : ""}
       </div>
 
       <button
