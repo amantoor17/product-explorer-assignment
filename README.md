@@ -1,3 +1,5 @@
+#### **LIVE DEMO :** https://amantoor17.github.io/product-explorer-assignment/
+
 # Product Explorer Assignment
 
 A React + Vite application built as part of the Product Explorer Assignment, which displays products from a public API (https://dummyjson.com).
